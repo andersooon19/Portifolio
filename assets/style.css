@@ -596,3 +596,144 @@ footer {
 footer p {
     margin: 0; /* Remove margens */
 }
+
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 576px) {
+    /* Barra lateral */
+    .barra-lateral {
+        width: 100px; /* Reduz a largura da barra lateral */
+        padding: 10px; /* Reduz padding */
+    }
+
+    .barra-lateral .logo,
+    .barra-lateral p,
+    .barra-lateral span {
+        display: none; /* Oculta o logo e texto não essenciais */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Ajusta tamanho do menu */
+        padding: 10px; /* Padding menor para links */
+        text-align: center; /* Centraliza os itens de menu */
+    }
+
+    .redes-sociais {
+        display: flex;
+        justify-content: center; /* Centraliza as redes sociais */
+        flex-direction: column;
+    }
+
+    /* Conteúdo principal */
+    .conteudo-principal {
+        margin: 0; /* Remove margem para ajustar layout */
+        padding: 20px; /* Padding menor para o conteúdo */
+    }
+
+    /* Seções de introdução */
+    .introducao h1 {
+        font-size: 2rem; /* Reduz tamanho do título principal */
+    }
+
+    .introducao h2 {
+        font-size: 1.5rem; /* Reduz subtítulo */
+    }
+
+    .sessao h2 {
+        font-size: 1.6rem; /* Ajusta cabeçalho das seções */
+    }
+
+    .sessao p,
+    .sessao ul li,
+    .projeto p,
+    .informacoes-contato p {
+        font-size: 0.9rem; /* Reduz tamanho do texto */
+        line-height: 1.4; /* Espaçamento menor */
+    }
+
+    /* Projetos e botões */
+    .projeto {
+        padding: 15px; /* Padding menor para cada projeto */
+    }
+
+    .botao-contato,
+    .botao-projeto,
+    .botao-github {
+        font-size: 0.9rem; /* Tamanho menor para botões */
+        padding: 8px 12px; /* Padding menor */
+        width: 100%; /* Botões em largura completa */
+        margin: 5px 0; /* Espaçamento entre botões */
+    }
+
+    /* Redes sociais */
+    .redes-sociais a {
+        font-size: 0.9rem;
+        padding: 8px 10px; /* Ajuste de padding */
+    }
+
+    /* Seção de contato */
+    .contato {
+        text-align: center; /* Centraliza texto */
+        padding: 15px; /* Menor padding */
+    }
+
+    .titulo-contato {
+        font-size: 2rem; /* Ajusta tamanho do título de contato */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px; /* Menor tamanho para o footer */
+        text-align: center; /* Centraliza texto do footer */
+        padding: 10px 5px;
+    }
+}
+
+/* Responsividade para tablets (paisagem e retrato) */
+@media (min-width: 577px) and (max-width: 1024px) {
+    .barra-lateral {
+        width: 180px; /* Ajusta barra lateral */
+    }
+
+    .conteudo-principal {
+        margin-left: 200px;
+        padding: 30px; /* Ajusta padding */
+    }
+
+    .introducao h1 {
+        font-size: 2.5rem;
+    }
+
+    .introducao h2 {
+        font-size: 1.8rem;
+    }
+
+    .sessao h2 {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+
+    .botao-contato,
+    .botao-projeto,
+    .botao-github {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .redes-sociais {
+        flex-direction: row;
+        justify-content: center; /* Alinha redes sociais ao centro */
+    }
+
+    .contato {
+        padding: 20px;
+    }
+
+    .titulo-contato {
+        font-size: 2.2rem;
+    }
+}
