@@ -597,143 +597,224 @@ footer p {
     margin: 0; /* Remove margens */
 }
 
-
-/* Responsividade para telas menores (celulares) */
-@media (max-width: 576px) {
-    /* Barra lateral */
+/* Telas muito pequenas (celulares de 320px a 480px) */
+@media (max-width: 480px) {
     .barra-lateral {
-        width: 100px; /* Reduz a largura da barra lateral */
-        padding: 10px; /* Reduz padding */
+        width: 60px; /* Barra lateral bem reduzida */
+        padding: 5px 0;
     }
 
     .barra-lateral .logo,
     .barra-lateral p,
     .barra-lateral span {
-        display: none; /* Oculta o logo e texto não essenciais */
+        display: none;
     }
 
     nav ul li a {
-        font-size: 0.8rem; /* Ajusta tamanho do menu */
-        padding: 10px; /* Padding menor para links */
-        text-align: center; /* Centraliza os itens de menu */
+        font-size: 0.75rem;
+        padding: 6px 0;
+        text-align: center;
     }
 
-    .redes-sociais {
-        display: flex;
-        justify-content: center; /* Centraliza as redes sociais */
-        flex-direction: column;
-    }
-
-    /* Conteúdo principal */
     .conteudo-principal {
-        margin: 0; /* Remove margem para ajustar layout */
-        padding: 20px; /* Padding menor para o conteúdo */
+        margin: 0;
+        padding: 10px;
     }
 
-    /* Seções de introdução */
     .introducao h1 {
-        font-size: 2rem; /* Reduz tamanho do título principal */
+        font-size: 1.5rem;
     }
 
     .introducao h2 {
-        font-size: 1.5rem; /* Reduz subtítulo */
+        font-size: 1.1rem;
     }
 
-    .sessao h2 {
-        font-size: 1.6rem; /* Ajusta cabeçalho das seções */
+    .sessao h2,
+    .titulo-contato {
+        font-size: 1.2rem;
     }
 
     .sessao p,
-    .sessao ul li,
     .projeto p,
     .informacoes-contato p {
-        font-size: 0.9rem; /* Reduz tamanho do texto */
-        line-height: 1.4; /* Espaçamento menor */
-    }
-
-    /* Projetos e botões */
-    .projeto {
-        padding: 15px; /* Padding menor para cada projeto */
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
 
     .botao-contato,
     .botao-projeto,
     .botao-github {
-        font-size: 0.9rem; /* Tamanho menor para botões */
-        padding: 8px 12px; /* Padding menor */
-        width: 100%; /* Botões em largura completa */
-        margin: 5px 0; /* Espaçamento entre botões */
+        font-size: 0.8rem;
+        padding: 5px 8px;
+        width: 100%;
+        margin: 4px 0;
     }
 
-    /* Redes sociais */
-    .redes-sociais a {
-        font-size: 0.9rem;
-        padding: 8px 10px; /* Ajuste de padding */
-    }
-
-    /* Seção de contato */
-    .contato {
-        text-align: center; /* Centraliza texto */
-        padding: 15px; /* Menor padding */
-    }
-
-    .titulo-contato {
-        font-size: 2rem; /* Ajusta tamanho do título de contato */
-    }
-
-    /* Footer */
     footer {
-        font-size: 12px; /* Menor tamanho para o footer */
-        text-align: center; /* Centraliza texto do footer */
-        padding: 10px 5px;
+        font-size: 0.7rem;
+        padding: 8px 5px;
+        text-align: center;
     }
 }
 
-/* Responsividade para tablets (paisagem e retrato) */
-@media (min-width: 577px) and (max-width: 1024px) {
+/* Telas pequenas (celulares de 481px a 576px) */
+@media (min-width: 481px) and (max-width: 576px) {
     .barra-lateral {
-        width: 180px; /* Ajusta barra lateral */
+        width: 80px;
+        padding: 8px 0;
+    }
+
+    .barra-lateral .logo,
+    .barra-lateral p,
+    .barra-lateral span {
+        display: none;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 8px 0;
     }
 
     .conteudo-principal {
-        margin-left: 200px;
-        padding: 30px; /* Ajusta padding */
+        margin: 0;
+        padding: 15px;
     }
 
     .introducao h1 {
-        font-size: 2.5rem;
-    }
-
-    .introducao h2 {
         font-size: 1.8rem;
     }
 
-    .sessao h2 {
+    .introducao h2 {
+        font-size: 1.2rem;
+    }
+
+    .sessao h2,
+    .titulo-contato {
+        font-size: 1.4rem;
+    }
+
+    .sessao p,
+    .projeto p,
+    .informacoes-contato p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .botao-contato,
+    .botao-projeto,
+    .botao-github {
+        font-size: 0.85rem;
+        padding: 7px 10px;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        padding: 8px 5px;
+    }
+}
+
+/* Telas médias (tablets pequenos e celulares em paisagem - 577px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .barra-lateral {
+        width: 120px;
+        padding: 10px 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .conteudo-principal {
+        margin-left: 130px;
+        padding: 20px;
+    }
+
+    .introducao h1 {
         font-size: 2rem;
+    }
+
+    .introducao h2 {
+        font-size: 1.3rem;
+    }
+
+    .sessao h2,
+    .titulo-contato {
+        font-size: 1.6rem;
+    }
+
+    .sessao p,
+    .projeto p,
+    .informacoes-contato p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .botao-contato,
+    .botao-projeto,
+    .botao-github {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        width: auto;
+        margin: 8px 0;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 8px;
+    }
+}
+
+/* Telas grandes (tablets e pequenos notebooks - 769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .barra-lateral {
+        width: 150px;
+        padding: 10px 10px;
     }
 
     nav ul li a {
         font-size: 1rem;
-        padding: 10px 12px;
+        padding: 12px;
+    }
+
+    .conteudo-principal {
+        margin-left: 160px;
+        padding: 25px;
+    }
+
+    .introducao h1 {
+        font-size: 2.2rem;
+    }
+
+    .introducao h2 {
+        font-size: 1.5rem;
+    }
+
+    .sessao h2,
+    .titulo-contato {
+        font-size: 1.8rem;
+    }
+
+    .sessao p,
+    .projeto p,
+    .informacoes-contato p {
+        font-size: 1rem;
+        line-height: 1.7;
     }
 
     .botao-contato,
     .botao-projeto,
     .botao-github {
         font-size: 1rem;
-        padding: 10px 15px;
+        padding: 10px 20px;
+        width: auto;
+        margin: 10px 0;
     }
 
-    .redes-sociais {
-        flex-direction: row;
-        justify-content: center; /* Alinha redes sociais ao centro */
-    }
-
-    .contato {
-        padding: 20px;
-    }
-
-    .titulo-contato {
-        font-size: 2.2rem;
+    footer {
+        font-size: 0.9rem;
+        padding: 12px 10px;
     }
 }
