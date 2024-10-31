@@ -1,116 +1,598 @@
-/* Resetando margens e paddings */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral do body */
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex; /* Usado para colocar a barra lateral e o conteúdo em linha */
-    min-height: 100vh; /* Altura mínima da página */
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Estilo da barra lateral */
+/* Estilização da barra lateral */
 .barra-lateral {
-    background-color: #2d2d2d; /* Cor de fundo da barra lateral */
-    color: white; /* Cor do texto na barra lateral */
-    width: 250px; /* Largura fixa da barra lateral */
-    padding: 20px; /* Espaçamento interno */
-    position: fixed; /* Fixa a barra lateral */
-    height: 100%; /* Altura total da barra lateral */
+    width: 260px;
+    background-color: #1c1c1c; /* Cor da barra lateral escura */
+    color: #ecf0f1;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+    transition: width 0.3s ease-in-out;
 }
 
-/* Estilo do logo */
+.barra-lateral:hover {
+    width: 280px;
+}
+
 .barra-lateral .logo {
-    text-align: center; /* Centraliza o conteúdo do logo */
-    margin-bottom: 20px; /* Espaçamento abaixo do logo */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .barra-lateral .img-logo {
-    width: 100px; /* Largura do logo */
-    border-radius: 50%; /* Logo em formato circular */
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* Estilo da navegação */
-.barra-lateral nav ul {
-    list-style: none; /* Remove marcadores da lista */
+.barra-lateral .img-logo:hover {
+    transform: scale(1.1);
 }
 
-.barra-lateral nav ul li {
-    margin: 15px 0; /* Espaçamento entre os itens do menu */
+.barra-lateral p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.barra-lateral nav a {
-    color: #64ffda; /* Cor dos links na barra lateral */
-    text-decoration: none; /* Remove sublinhado dos links */
+.barra-lateral span {
+    display: block;
+    font-size: 1rem;
+    color: #bdc3c7;
+    text-align: center;
 }
 
-.barra-lateral nav a:hover {
-    text-decoration: underline; /* Efeito de sublinhado ao passar o mouse */
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Estilo das redes sociais */
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 12px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #64ffda; /* Cor de fundo ao passar o mouse */
+    color: #121212; /* Cor do texto ao passar o mouse */
+    transform: translateX(10px);
+}
+
 .redes-sociais {
-    margin-top: 20px; /* Espaço acima das redes sociais */
+    margin-top: 30px;
 }
 
 .redes-sociais a {
-    color: #64ffda; /* Cor dos links de redes sociais */
-    text-decoration: none; /* Remove sublinhado */
-    display: block; /* Cada link em sua própria linha */
-    margin: 5px 0; /* Espaçamento entre os links */
+    color: #ecf0f1; /* Cor padrão */
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 5px 0;
+    display: block;
+    transition: color 0.3s ease; /* Apenas a cor vai mudar */
 }
 
-/* Estilo do conteúdo principal */
+.redes-sociais a:hover {
+    color: #64ffda; /* Cor ao passar o mouse */
+}
+
+/* Estilização do conteúdo principal */
 .conteudo-principal {
-    margin-left: 270px; /* Espaço para a barra lateral */
-    padding: 20px; /* Espaçamento interno */
-    flex: 1; /* Permite que o conteúdo principal ocupe o restante do espaço */
-    background-color: #f0f0f0; /* Cor de fundo do conteúdo principal */
+    margin-left: 280px;
+    padding: 40px 60px;
+    background-color: #1f1f1f; /* Cor do fundo do conteúdo mais escura */
+    min-height: 100vh;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
+    transition: margin-left 0.3s ease-in-out;
 }
 
-/* Estilos para os títulos */
-h1, h2, h3 {
-    color: #2d2d2d; /* Cor dos títulos */
+.conteudo-principal:hover {
+    margin-left: 290px;
 }
 
-/* Estilo dos botões */
-.botao-contato, .botao-projeto, .botao-github {
-    display: inline-block; /* Botões em linha */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    margin: 10px 0; /* Espaço entre os botões */
-    color: white; /* Cor do texto nos botões */
-    background-color: #64ffda; /* Cor de fundo dos botões */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
+.sessao {
+    margin-bottom: 50px;
 }
 
-.botao-contato:hover, .botao-projeto:hover, .botao-github:hover {
-    background-color: #50b3a2; /* Cor ao passar o mouse */
+.sessao h2 {
+    font-size: 2.2rem;
+    color: #64ffda; /* Cor do cabeçalho */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #64ffda; /* Linha de destaque */
+    padding-bottom: 10px;
 }
 
-/* Estilo do rodapé */
-.footer {
-    text-align: center; /* Centraliza o texto do rodapé */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #2d2d2d; /* Cor de fundo do rodapé */
-    color: white; /* Cor do texto no rodapé */
-    position: relative; /* Posiciona o rodapé relativo à página */
-    bottom: 0; /* Alinha o rodapé ao fundo da página */
-    width: 100%; /* Largura total do rodapé */
+.sessao p {
+    font-size: 1.1rem;
+    color: #bdc3c7; /* Cor do texto */
+    margin-bottom: 15px;
 }
 
-/* Media Queries para Responsividade */
+.sessao ul {
+    list-style-type: square; /* Marcador de lista quadrado */
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.sessao ul li {
+    margin-bottom: 10px;
+}
+
+.sessao ul li strong {
+    color: #ecf0f1; /* Cor do texto em negrito */
+}
+
+/* Estilização da seção de introdução */
+.introducao {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.introducao h1 {
+    font-size: 3.2rem;
+    color: #64ffda; /* Cor do título principal */
+    margin-bottom: 25px;
+}
+
+.introducao h2 {
+    font-size: 2.2rem;
+    color: #64ffda; /* Cor do subtítulo alterada para o mesmo da cor do nome */
+    margin-bottom: 30px;
+}
+
+/* Botão de contato */
+.botao-contato {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #64ffda; /* Cor do texto do botão */
+    border: 2px solid #64ffda; /* Cor da borda do botão */
+    border-radius: 5px; /* Arredondamento da borda */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-contato:hover {
+    background-color: #64ffda; /* Cor de fundo ao passar o mouse */
+    color: #121212; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização para dispositivos móveis */
 @media (max-width: 768px) {
     .barra-lateral {
-        position: relative; /* Altera a posição para responsividade */
-        width: 100%; /* Largura total em telas pequenas */
-        height: auto; /* Altura automática */
+        width: 220px;
     }
 
     .conteudo-principal {
-        margin-left: 0; /* Remove a margem esquerda em telas pequenas */
+        margin-left: 240px;
+        padding: 30px;
     }
+
+    .barra-lateral:hover {
+        width: 240px;
+    }
+
+    .conteudo-principal:hover {
+        margin-left: 250px;
+    }
+
+    .introducao h1 {
+        font-size: 2.6rem;
+    }
+
+    .introducao h2 {
+        font-size: 1.8rem;
+    }
+
+    .botao-contato {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+.contato {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 40px; /* Margem superior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #1f1f1f; /* Cor de fundo da seção */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.titulo-contato {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #64ffda; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.informacoes-contato {
+    margin-bottom: 30px; /* Espaço abaixo das informações */
+    color: #ecf0f1; /* Cor do texto */
+    font-size: 1.2rem; /* Tamanho do texto */
+}
+
+.informacoes-contato p {
+    margin: 10px 0; /* Margem entre os parágrafos */
+}
+
+
+.redes-sociais a {
+    display: inline-block; /* Exibe os links como blocos */
+    margin: 10px 0; /* Espaçamento vertical entre os botões */
+    padding: 10px 15px; /* Espaçamento interno */
+    color: #ecf0f1; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border: 2px solid #64ffda; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Animação */
+}
+
+.redes-sociais a:hover {
+    background-color: #64ffda; /* Cor ao passar o mouse */
+    color: #121212; /* Texto ao passar o mouse */
+}
+
+.projetos {
+    margin-top: 40px; /* Reduz o espaço superior da seção */
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2.5rem;
+    color: #64ffda;
+    margin-bottom: 30px; /* Mantém um espaço razoável abaixo do título */
+}
+
+.projeto {
+    background-color: #1f1f1f; /* Fundo escuro para o projeto */
+    padding: 20px;
+    margin-bottom: 50px; /* Aumenta o espaço entre os projetos */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.projeto h3 {
+    font-size: 1.8rem;
+    color: #64ffda; /* Cor do nome do projeto */
+    margin-bottom: 15px;
+}
+
+.projeto p {
+    font-size: 1.1rem;
+    color: #bdc3c7; /* Cor da descrição do projeto */
+    margin-bottom: 10px;
+}
+
+.projeto strong {
+    color: #ecf0f1; /* Cor do texto em destaque */
+}
+
+.botao-projeto,
+.botao-github {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-projeto:hover,
+.botao-github:hover {
+    background-color: #64ffda;
+    color: #121212;
+}
+
+/* Estilização da seção de introdução com animações */
+.introducao {
+    text-align: center;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease forwards; /* Animação de entrada */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.introducao h2 {
+    font-size: 2.2rem;
+    color: #7f8c8d; /* Cor do subtítulo */
+    margin-bottom: 30px;
+    animation: fadeInLeft 1.5s ease 0.3s forwards; /* Animação de entrada com atraso */
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.introducao h1 {
+    font-size: 3.2rem;
+    color: #64ffda; /* Cor do título principal */
+    margin-bottom: 25px;
+    animation: fadeInRight 1.5s ease 0.6s forwards; /* Animação de entrada com atraso */
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Botão de contato com animação */
+.botao-contato {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    animation: fadeInUp 1.5s ease 0.9s forwards; /* Animação de entrada com atraso */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.botao-contato:hover {
+    background-color: #64ffda;
+    color: #121212;
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/* Animação para a seção de habilidades */
+#habilidades {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Animação para os itens da lista de habilidades */
+#habilidades ul li {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+#habilidades ul li:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+#habilidades ul li:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+#habilidades ul li:nth-child(4) {
+    animation-delay: 1.6s;
+}
+
+#habilidades ul li:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+#habilidades ul li:nth-child(6) {
+    animation-delay: 2s;
+}
+
+#habilidades ul li:nth-child(7) {
+    animation-delay: 2.2s;
+}
+
+#habilidades ul li:nth-child(8) {
+    animation-delay: 2.4s;
+}
+
+#habilidades ul li:nth-child(9) {
+    animation-delay: 2.6s;
+}
+
+/* Animação para o cabeçalho */
+#habilidades h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação minimalista para a seção "Sobre Mim" */
+#sobre {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: minimalFadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+#sobre h2 {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: minimalFadeIn 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+#sobre p {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: minimalFadeIn 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+#sobre p:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+#sobre p:nth-child(4) {
+    animation-delay: 1s;
+}
+
+@keyframes minimalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação para os projetos */
+.projeto {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    margin-bottom: 20px;
+}
+
+.projeto:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.projeto:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.projeto:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ajuste do título da seção */
+.projetos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInFromLeft 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilização adicional para os botões */
+.botao-projeto, .botao-github {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #64ffda;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-projeto:hover, .botao-github:hover {
+    background-color: #52e6c2;
+}
+
+/* Estilo para o Footer */
+footer {
+    background-color: #121212; /* Cor de fundo escura */
+    color: #64ffda; /* Cor do texto */
+    text-align: right; /* Alinha o texto à esquerda */
+    padding: 5px; /* Reduz a altura do footer */
+    position: static; /* Ajusta a posição */
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; /* Diminui o tamanho da fonte se necessário */
+}
+
+footer p {
+    margin: 0; /* Remove margens */
 }
